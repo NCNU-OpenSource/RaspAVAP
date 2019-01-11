@@ -339,7 +339,7 @@ DAEMON_OPTS=""
 > 注意！以下Crontab指令皆基於root權限，請用sudo crontab -e 打開
 
 ```
-0 3 * * * python /home/pi/signgen.py #執行樣本採集與資料庫生成
+0 3 * * * python /home/pi/VirDBGen.py #執行樣本採集與資料庫生成
 0 6 * * * \cp /home/pi/custom_rule.yara /var/lib/clamav/custom_rule.yara #將生成之資料庫寫入clamav之病毒庫位置
 0 7 * * * clamdscan --reload #載入新資料庫
 0 15 * * 4 rm -r /home/pi/samples/* #每周定期清理樣本檔
